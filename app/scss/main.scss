@@ -1,0 +1,121 @@
+@import "variables";
+@import "globals";
+
+// container for mobile view
+.container {
+  background-color: $darkDesaturatedBlue;
+  margin: 88px 24px;
+  height: 100%;
+  border-radius: 0.8rem;
+  overflow: hidden;
+
+  // container css for over 1000px
+  @media (min-width: 1000px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "left-column right-column";
+    margin: 90px auto;
+    width: 75vw;
+  }
+
+  // image container for mobile view
+  .image-container {
+    background: linear-gradient(rgba(130, 89, 155, 0.5)),
+      url("/images/image-header-mobile.jpg");
+    background-size: contain;
+    height: 239px;
+
+    // image container for over 1000px
+    @media (min-width: 1000px) {
+      grid-area: right-column;
+      background: linear-gradient(rgba(170, 92, 219, 0.55)),
+        url("/images/image-header-desktop.jpg");
+      height: 445px;
+    }
+  }
+
+  // description for mobile view
+  .description {
+    margin: 3rem 2rem;
+    text-align: center;
+
+    & > h1 {
+      margin: 1rem 0;
+      color: $white;
+      font-weight: 700;
+    }
+
+    &__main-highlight {
+      color: $softViolet;
+    }
+
+    & > p {
+      margin: 1rem 0;
+      line-height: 1.5rem;
+      color: $slightlyTransparentWhite2;
+      font-family: "Lexend Deca", sans-serif;
+    }
+
+    // description for over 650px
+    @media (min-width: 650px) {
+      grid-area: left-column;
+      margin: 2rem 3rem;
+      padding-right: 0.5rem;
+      text-align: left;
+    }
+
+    // description for over 1000px
+    @media (min-width: 1000px) {
+      grid-area: left-column;
+      margin: 3rem 3rem;
+      padding-right: 0.5rem;
+      text-align: left;
+    }
+  }
+
+  // stats for mobile view
+  .stats {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    &__sub {
+      margin: 1rem auto;
+
+      & > h2 {
+        padding: 0.5rem;
+        color: $white;
+      }
+
+      & > p {
+        color: $slightlyTransparentWhite2;
+        font-family: "Lexend Deca", sans-serif;
+      }
+    }
+
+    // stats for over 1000px
+    @media (min-width: 650px) {
+      grid-area: left-column;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-evenly;
+      margin: 1rem 3rem;
+
+      &__sub {
+        padding: 0 1rem;
+      }
+    }
+
+    // stats for over 1000px
+    @media (min-width: 1000px) {
+      grid-area: left-column;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-evenly;
+      margin: 2rem 3rem;
+
+      &__sub {
+        padding: 0 1rem;
+      }
+    }
+  }
+}
