@@ -4,7 +4,7 @@
 
 # The site for this repo is hosted in
 
-[Netlify](https://sharp-neumann-983a3a.netlify.app) feel free to check it out.
+[Netlify](https://sharp-neumann-983a3a.netlify.app) feel free to check it out
 
 ## Welcome! 👋
 
